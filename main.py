@@ -7,11 +7,17 @@ def get_book_text(filename):
     return book_contents
 
 def main():
-    book = get_book_text("books/frankenstein.txt")
-    words = get_num_words(book)
-    print(f"Found {words} total words")
-    char_nums = get_num_characters(book)
-    print(char_nums)
-    
+   book_filename = "books/frankenstein.txt"
+   book = get_book_text("books/frankenstein.txt")
+   char_nums = get_num_characters(book)
+
+   print("============ BOOKBOT ============")
+   print(f"Analyzing book found at {book_filename}...")
+   print("----------- Word Count ----------")
+   print(f"Found {get_num_words(book)} total words")
+   print("--------- Character Count -------")
+#print sorted list here
+   print("============= END ===============")
+
 
 main()
